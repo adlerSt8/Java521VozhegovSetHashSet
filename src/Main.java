@@ -7,10 +7,9 @@ public class Main {
         HashSet<Integer> numbers = new HashSet<>();
 
         for (int i = 0; i < nums.length; i++) {
-            int numberSecond = targetSum - nums[i];
-            if (numbers.contains(numberSecond)) {
+            if (numbers.contains(targetSum - nums[i])) {
                 for (int j = 0; j < i; j++) {
-                    if (nums[j] == numberSecond) {
+                    if (nums[j] == targetSum - nums[i]) {
                         System.out.println("Индексы: " + j + ", " + i);
                         return;
                     }
